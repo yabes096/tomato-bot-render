@@ -8,8 +8,9 @@ from difflib import get_close_matches
 from sklearn.linear_model import LinearRegression
 import feedparser
 from keep_alive import keep_alive
+import os
 
-TOKEN = ''
+TOKEN = os.getenv("TOKEN")
 PREFIX = '.'
 intents = discord.Intents.default()
 intents.message_content = True
@@ -99,7 +100,7 @@ async def on_message(message):
 
 
 @bot.command()
-async def help(ctx, symbol):
+async def help(ctx):
     async with ctx.typing():
         embed = discord.Embed(title="📘 Panduan Bot Tomato",
                               color=discord.Color.blue())
