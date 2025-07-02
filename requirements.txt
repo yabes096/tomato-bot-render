@@ -1,0 +1,7 @@
+discord.py
+flask
+matplotlib
+requests
+numpy
+scikit-learn
+feedparser
